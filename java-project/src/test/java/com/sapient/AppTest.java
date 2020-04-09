@@ -11,11 +11,6 @@ public class AppTest
     extends TestCase
 {
     private App app;
-
-    // public void setup(){
-    //     app = new App();
-    // }
-
    
     public void testCheckEven1() {
         app = new App();
