@@ -1,0 +1,42 @@
+create database PJPpractice;
+\c pjppractice;
+create table test(id INT, fname char(30));
+alter table test add column lanme char(30);
+alter table test Rename column lanme to last_name;
+alter table test add primary key (id);
+alter table test drop column last_name;
+\d+ test
+alter table test rename to test1;
+
+
+
+select modulecode from modules where duration < 6;
+
+select batchcode, coursecode, startdate, capacity, batchstrength from batches,trainers where batches.trainerid = trainers.trainerid and trainers.trainername = 'KRISHNAN';
+
+select n2.modulename from courseandmodules as n1, modules as n2, courses as n3 where n2.modulecode = n1.modulecode and n1.coursecode = n3.coursecode and n3.coursecode = 100;
+
+select n2.modulename,n3.coursecode from courseandmodules as n1, modules as n2, courses as n3 where n2.modulecode = n1.modulecode and n1.coursecode = n3.coursecode and n3.coursecode = 100;
+
+select count(*) from courseandmodules as n1, modules as n2, courses as n3 where n2.modulecode = n1.modulecode and n1.coursecode = n3.coursecode and n3.coursecode = 100;
+
+select n3.coursecode, count(n3.coursecode) from courseandmodules as n1, modules as n2, courses as n3 where n2.modulecode = n1.modulecode and n1.coursecode = n3.coursecode group by n3.coursecode;
+
+select n1.coursecode, n1.fees from courses n1 inner join (select max(fees) as maxfee from courses ) as max on n1.fees = max.maxfee;
+
+ select studentid, studentname, batchcode, place, phone from students where batchcode = 3001;
+
+ select studentid, studentname, batchcode, place, phone from students where place = 'CHENNAI';
+
+ select count(modulecode) from modules where duration < 6;
+
+ select n1.batchcode, n2.title, n1.startdate from batches as n1, courses as n2 where n1.coursecode = n2.coursecode and n1.startdate between '2012-05-01' and '2012-05-31';
+
+ select n1.coursecode, n2.title, n2.fees from batches as n1, courses as n2 where n1.coursecode = n2.coursecode and  not n1.startdate between '2012-01-01' and '2012-01-31';
+
+ select n2.modulename from courseandmodules as n1, modules as n2, courses as n3 where n2.modulecode = n1.modulecode and n1.coursecode = n3.coursecode and n3.title = 'Oracle DBA';
+
+ select n1.studentid,n1.studentname,n1.batchcode,n1.place,n1.phone from students as n1 , batches as n2 where n1.batchcode = n2.batchcode and n1.place ='CHENNAI' and n2.startdate between '2012-01-01' and '2012-12-31';
+
+ 
+ select n1.studentid,n1.studentname from students as n1 , batches as n2 where n1.batchcode = n2.batchcode and n2.coursecode =200;
