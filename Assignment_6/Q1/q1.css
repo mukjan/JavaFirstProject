@@ -1,10 +1,8 @@
 body{
-	font-family: 'Raleway', sans-serif;
 	border:20px solid #bdc3c7;
 	width: 100%;
 }
 .heading{
-	font-family: 'Raleway', sans-serif;
 	font-weight: 700;
 }
 
@@ -15,19 +13,14 @@ body{
   	padding: 10px;
 }
 
-td, th {
-  border: 2px solid black;
-  text-align: left;
-}
+
 
 label {
 	color: white;
 	margin: 5px
 }
 
-tr:nth-child(even) {
-  background-color: #dddddd;
-}
+
 
 
 form {
@@ -35,17 +28,9 @@ form {
 	background: #2c3e50;
 }
 
-input[type=text], input[type=password] {
-  width: 100%;
-  padding: 12px 20px;
-  margin: 14px 0;
-  display: inline-block;
-  border: 1px solid #ccc;
-  box-sizing: border-box;
-}
 
 .btn {
-  background-color: #4CAF50;
+  background-color: blue;
   color: white;
   padding: 14px 20px;
   margin: 8px 0;
