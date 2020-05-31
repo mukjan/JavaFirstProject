@@ -1,0 +1,19 @@
+th,td{
+    text-align: center;
+}
+
+td{
+    color: red;
+}
+
+.container{
+    margin-top: 20px;
+}
+
+.headings{
+    background-color: gray;
+}
+
+.table{
+    font-family:cursive;
+}
